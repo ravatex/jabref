@@ -93,7 +93,7 @@ public class AbstractJabKitTest {
      * @return The captured stdout string.
      */
     protected String getStandardOutput() {
-        return outWriter.toString();
+        return outWriter.toString().replace("\r\n", "\n");
     }
 
     /**
@@ -102,7 +102,7 @@ public class AbstractJabKitTest {
      * @return The captured stderr string.
      */
     protected String getErrorOutput() {
-        return errWriter.toString();
+        return errWriter.toString().replace("\r\n", "\n");
     }
 
     /**
